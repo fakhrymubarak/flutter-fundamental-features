@@ -4,6 +4,7 @@ import 'package:rpl_apps_flutter/views/audio_page.dart';
 import 'package:rpl_apps_flutter/views/camera_page.dart';
 import 'package:rpl_apps_flutter/views/geo_locator_page.dart';
 import 'package:rpl_apps_flutter/views/home_page.dart';
+import 'package:rpl_apps_flutter/views/mic_page.dart';
 
 import 'binding/geo_locator_binding.dart';
 
@@ -25,5 +26,7 @@ class Routes {
       page: () => const AudioPage(
           url: "https://filesamples.com/samples/audio/mp3/sample1.mp3"),
     ),
+    GetPage(name: '/mic', page: () => const MicPage()),
+
   ];
 }
