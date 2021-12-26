@@ -2,6 +2,7 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:rpl_apps_flutter/routes/binding/camera_binding.dart';
 import 'package:rpl_apps_flutter/views/audio_page.dart';
 import 'package:rpl_apps_flutter/views/camera_page.dart';
+import 'package:rpl_apps_flutter/views/contact_page.dart';
 import 'package:rpl_apps_flutter/views/geo_locator_page.dart';
 import 'package:rpl_apps_flutter/views/home_page.dart';
 import 'package:rpl_apps_flutter/views/mic_page.dart';
@@ -27,6 +28,6 @@ class Routes {
           url: "https://filesamples.com/samples/audio/mp3/sample1.mp3"),
     ),
     GetPage(name: '/mic', page: () => const MicPage()),
-
+    GetPage(name: '/contact', page: () => const ContactListPage()),
   ];
 }

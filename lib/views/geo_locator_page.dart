@@ -22,16 +22,12 @@ class _GeoLocatorPageState extends State<GeoLocatorPage> {
         child: Center(
           child: Obx(
             () => _controller.geoLocatorValue.value.latitude == null
-                ? _loadingWidgets()
+                ? const CircularProgressIndicator()
                 : _successWidgets(_controller.geoLocatorValue.value),
           ),
         ),
       ),
     );
-  }
-
-  _loadingWidgets() {
-    return const Text("Loading . . .");
   }
 
   _successWidgets(GeoLocator value) {
