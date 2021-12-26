@@ -148,11 +148,11 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        _incrementCounter();
+                        Get.toNamed('/biometrics');
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Fingerprint Access'),
+                        child: const Text('Fingerprint and Face Access'),
                       ),
                     ),
                     SizedBox(height: 16.h),
