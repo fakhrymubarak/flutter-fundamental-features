@@ -217,11 +217,11 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        Get.toNamed('/connectivity');
+                        Get.toNamed('/phoneNumber');
                       },
-                      child: Padding(m
+                      child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Cellular Phone Access'),
+                        child: const Text('Cellular Number Access'),
                       ),
                     ),
                     SizedBox(height: 4.h),

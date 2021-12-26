@@ -12,6 +12,7 @@ import 'package:rpl_apps_flutter/views/ir_sensor_page.dart';
 import 'package:rpl_apps_flutter/views/mic_page.dart';
 import 'package:rpl_apps_flutter/views/nfc_page.dart';
 import 'package:rpl_apps_flutter/views/sensor_page.dart';
+import 'package:rpl_apps_flutter/views/cellular_number_page.dart';
 
 import 'binding/geo_locator_binding.dart';
 
@@ -41,5 +42,6 @@ class Routes {
     GetPage(name: '/ir', page: () => const IrSensorPage()),
     GetPage(name: '/nfc', page: () => NFCPage()),
     GetPage(name: '/sensors', page: () => SensorsPage()),
+    GetPage(name: '/phoneNumber', page: () => const CellularNumberPage()),
   ];
 }

@@ -66,6 +66,7 @@ dev_dependencies:
   ir_sensor_plugin: ^0.2.0
   nfc_manager: ^3.1.0
   sensors_plus: ^1.2.1
+  mobile_number: ^1.0.4
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
