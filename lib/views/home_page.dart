@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Notification'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Special Notification'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Geo-Location'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Camera Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Speaker Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Microphone Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Contact Book'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Fingerprint and Face Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -166,7 +166,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Cellular and Wifi Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -177,29 +177,18 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Bluetooth Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        Get.toNamed('/bluetooth');
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Bluetooth Access'),
-                      ),
-                    ),
-                    SizedBox(height: 16.h),
-                    ElevatedButton(
-                      style: buttonPrimaryLarge,
-                      onPressed: () {
-                        _incrementCounter();
+                        Get.toNamed('/ir');
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
                         child: const Text('Infrared Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -210,7 +199,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('NFC Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -221,7 +210,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Accelerometer Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -232,7 +221,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Magnetometer Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -243,7 +232,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Gyroscope Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -254,7 +243,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Data Cellular Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -265,7 +254,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('Device Serial Number'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
@@ -276,7 +265,7 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('IMEI Access'),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 4.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {

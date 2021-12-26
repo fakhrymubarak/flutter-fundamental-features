@@ -8,6 +8,7 @@ import 'package:rpl_apps_flutter/views/contact_page.dart';
 import 'package:rpl_apps_flutter/views/biometrics_page.dart';
 import 'package:rpl_apps_flutter/views/geo_locator_page.dart';
 import 'package:rpl_apps_flutter/views/home_page.dart';
+import 'package:rpl_apps_flutter/views/ir_sensor_page.dart';
 import 'package:rpl_apps_flutter/views/mic_page.dart';
 
 import 'binding/geo_locator_binding.dart';
@@ -34,6 +35,7 @@ class Routes {
     GetPage(name: '/contact', page: () => const ContactListPage()),
     GetPage(name: '/biometrics', page: () => const BiometricsPage()),
     GetPage(name: '/connectivity', page: () => const ConnectivityPage()),
-    GetPage(name: '/bluetooth', page: () => BluetoothPage()),
+    GetPage(name: '/bluetooth', page: () => const BluetoothPage()),
+    GetPage(name: '/ir', page: () => const IrSensorPage()),
   ];
 }
