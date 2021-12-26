@@ -228,22 +228,11 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        _incrementCounter();
+                        Get.toNamed('/deviceInfo');
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Device Serial Number'),
-                      ),
-                    ),
-                    SizedBox(height: 4.h),
-                    ElevatedButton(
-                      style: buttonPrimaryLarge,
-                      onPressed: () {
-                        _incrementCounter();
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('IMEI Access'),
+                        child: const Text('Device Info (Device ID)'),
                       ),
                     ),
                     SizedBox(height: 4.h),

@@ -67,6 +67,8 @@ dev_dependencies:
   nfc_manager: ^3.1.0
   sensors_plus: ^1.2.1
   mobile_number: ^1.0.4
+  device_info_plus: ^3.2.0
+  unique_identifier: ^0.2.2
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

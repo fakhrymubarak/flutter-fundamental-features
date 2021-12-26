@@ -6,8 +6,10 @@ import 'package:rpl_apps_flutter/views/bluetooth_page.dart';
 import 'package:rpl_apps_flutter/views/camera_page.dart';
 import 'package:rpl_apps_flutter/views/connectivity_page.dart';
 import 'package:rpl_apps_flutter/views/contact_page.dart';
+import 'package:rpl_apps_flutter/views/device_info_page.dart';
 import 'package:rpl_apps_flutter/views/geo_locator_page.dart';
 import 'package:rpl_apps_flutter/views/home_page.dart';
+import 'package:rpl_apps_flutter/views/identifier_page.dart';
 import 'package:rpl_apps_flutter/views/ir_sensor_page.dart';
 import 'package:rpl_apps_flutter/views/mic_page.dart';
 import 'package:rpl_apps_flutter/views/nfc_page.dart';
@@ -43,5 +45,6 @@ class Routes {
     GetPage(name: '/nfc', page: () => NFCPage()),
     GetPage(name: '/sensors', page: () => SensorsPage()),
     GetPage(name: '/phoneNumber', page: () => const CellularNumberPage()),
+    GetPage(name: '/deviceInfo', page: () => const DeviceInfoPage()),
   ];
 }
