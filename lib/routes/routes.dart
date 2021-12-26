@@ -10,6 +10,7 @@ import 'package:rpl_apps_flutter/views/geo_locator_page.dart';
 import 'package:rpl_apps_flutter/views/home_page.dart';
 import 'package:rpl_apps_flutter/views/ir_sensor_page.dart';
 import 'package:rpl_apps_flutter/views/mic_page.dart';
+import 'package:rpl_apps_flutter/views/nfc_page.dart';
 
 import 'binding/geo_locator_binding.dart';
 
@@ -37,5 +38,6 @@ class Routes {
     GetPage(name: '/connectivity', page: () => const ConnectivityPage()),
     GetPage(name: '/bluetooth', page: () => const BluetoothPage()),
     GetPage(name: '/ir', page: () => const IrSensorPage()),
+    GetPage(name: '/nfc', page: () => NFCPage()),
   ];
 }
