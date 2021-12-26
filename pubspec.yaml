@@ -52,8 +52,10 @@ dev_dependencies:
   geolocator: ^8.0.1
   location: ^4.3.0
   camera: ^0.9.4+5
-  path_provider:
-  path:
+  path_provider: ^2.0.8
+  path: ^1.8.0
+  audioplayers: ^0.20.1
+  http: ^0.13.3
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
