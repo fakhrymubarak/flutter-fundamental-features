@@ -13,56 +13,53 @@ class NFCPageState extends State<NFCPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('NfcManager Plugin Example')),
-        body: SafeArea(
-          child: FutureBuilder<bool>(
-            future: NfcManager.instance.isAvailable(),
-            builder: (context, ss) => ss.data != true
-                ? Center(child: Text('NfcManager.isAvailable(): ${ss.data}'))
-                : Flex(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    direction: Axis.vertical,
-                    children: [
-                      Flexible(
-                        flex: 2,
-                        child: Container(
-                          margin: EdgeInsets.all(4),
-                          constraints: BoxConstraints.expand(),
-                          decoration: BoxDecoration(border: Border.all()),
-                          child: SingleChildScrollView(
-                            child: ValueListenableBuilder<dynamic>(
-                              valueListenable: result,
-                              builder: (context, value, _) =>
-                                  Text('${value ?? ''}'),
-                            ),
+    return Scaffold(
+      appBar: AppBar(title: Text('NFC Manager')),
+      body: SafeArea(
+        child: FutureBuilder<bool>(
+          future: NfcManager.instance.isAvailable(),
+          builder: (context, ss) => ss.data != true
+              ? Center(child: Text('NfcManager.isAvailable(): ${ss.data}'))
+              : Flex(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  direction: Axis.vertical,
+                  children: [
+                    Flexible(
+                      flex: 2,
+                      child: Container(
+                        margin: EdgeInsets.all(4),
+                        constraints: BoxConstraints.expand(),
+                        decoration: BoxDecoration(border: Border.all()),
+                        child: SingleChildScrollView(
+                          child: ValueListenableBuilder<dynamic>(
+                            valueListenable: result,
+                            builder: (context, value, _) =>
+                                Text('${value ?? ''}'),
                           ),
                         ),
                       ),
-                      Flexible(
-                        flex: 3,
-                        child: GridView.count(
-                          padding: EdgeInsets.all(4),
-                          crossAxisCount: 2,
-                          childAspectRatio: 4,
-                          crossAxisSpacing: 4,
-                          mainAxisSpacing: 4,
-                          children: [
-                            ElevatedButton(
-                                child: Text('Tag Read'), onPressed: _tagRead),
-                            ElevatedButton(
-                                child: Text('Ndef Write'),
-                                onPressed: _ndefWrite),
-                            ElevatedButton(
-                                child: Text('Ndef Write Lock'),
-                                onPressed: _ndefWriteLock),
-                          ],
-                        ),
+                    ),
+                    Flexible(
+                      flex: 3,
+                      child: GridView.count(
+                        padding: EdgeInsets.all(4),
+                        crossAxisCount: 2,
+                        childAspectRatio: 4,
+                        crossAxisSpacing: 4,
+                        mainAxisSpacing: 4,
+                        children: [
+                          ElevatedButton(
+                              child: Text('Tag Read'), onPressed: _tagRead),
+                          ElevatedButton(
+                              child: Text('Ndef Write'), onPressed: _ndefWrite),
+                          ElevatedButton(
+                              child: Text('Ndef Write Lock'),
+                              onPressed: _ndefWriteLock),
+                        ],
                       ),
-                    ],
-                  ),
-          ),
+                    ),
+                  ],
+                ),
         ),
       ),
     );

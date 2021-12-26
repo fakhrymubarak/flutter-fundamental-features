@@ -104,11 +104,22 @@ class _AudioPageState extends State<AudioPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Speaker Request'),
+      ),
       body: SafeArea(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Padding(
+                padding: EdgeInsets.all(16.w),
+                child: Text(
+                  "Audio Source: ${widget.url}",
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              SizedBox(height: 8.h),
               Slider(
                 activeColor: Colors.blue,
                 inactiveColor: Colors.grey,

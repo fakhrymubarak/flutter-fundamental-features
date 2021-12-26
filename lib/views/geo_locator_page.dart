@@ -18,6 +18,9 @@ class _GeoLocatorPageState extends State<GeoLocatorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Geo-Location'),
+      ),
       body: SafeArea(
         child: Center(
           child: Obx(

@@ -80,62 +80,60 @@ class _IrSensorPageState extends State<IrSensorPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Infrared Transmitter'),
-        ),
-        body: Center(
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 15.0,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Infrared Transmitter'),
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 15.0,
+            ),
+            Text('Running on: $_platformVersion\n'),
+            Text('Has Ir Emitter: $_hasIrEmitter\n'),
+            Text('IR Carrier Frequencies:$_getCarrierFrequencies'),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Container(
+              decoration:
+                  BoxDecoration(border: Border.all(color: Colors.blueAccent)),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text(power.toString()),
+                    const SizedBox(
+                      height: 15.0,
+                    ),
+                    ElevatedButton(
+                      onPressed: () async {
+                        final String result =
+                            await IrSensorPlugin.transmitListInt(list: power);
+                        debugPrint('Emitting  List Int Signal: $result');
+                      },
+                      child: Text('Transmitt List Int'),
+                    ),
+                  ],
+                ),
               ),
-              Text('Running on: $_platformVersion\n'),
-              Text('Has Ir Emitter: $_hasIrEmitter\n'),
-              Text('IR Carrier Frequencies:$_getCarrierFrequencies'),
-              const SizedBox(
-                height: 15.0,
-              ),
-              Container(
+            ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
                 decoration:
                     BoxDecoration(border: Border.all(color: Colors.blueAccent)),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(power.toString()),
-                      const SizedBox(
-                        height: 15.0,
-                      ),
-                      ElevatedButton(
-                        onPressed: () async {
-                          final String result =
-                              await IrSensorPlugin.transmitListInt(list: power);
-                          debugPrint('Emitting  List Int Signal: $result');
-                        },
-                        child: Text('Transmitt List Int'),
-                      ),
-                    ],
-                  ),
+                  child: FormSpecificCode(),
                 ),
               ),
-              const SizedBox(
-                height: 15.0,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.blueAccent)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: FormSpecificCode(),
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

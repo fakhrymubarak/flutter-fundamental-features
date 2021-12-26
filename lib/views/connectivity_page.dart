@@ -51,7 +51,7 @@ class _ConnectivityPageState extends State<ConnectivityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Connectivity example app'),
+        title: const Text('Connectivity'),
       ),
       body: Center(child: Text('Connection Status: $_connectionStatus')),
     );
