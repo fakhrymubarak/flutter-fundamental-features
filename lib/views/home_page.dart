@@ -199,48 +199,29 @@ class _HomePageState extends State<HomePage> {
                         child: const Text('NFC Access'),
                       ),
                     ),
-                    SizedBox(height: 4.h),
+                    SizedBox(height: 8.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        _incrementCounter();
+                        Get.toNamed('/sensors');
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Accelerometer Access'),
+                        child: const Text(
+                          'Accelerometer, Magnetometer, and Gyroscope Access',
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
-                    SizedBox(height: 4.h),
-                    ElevatedButton(
-                      style: buttonPrimaryLarge,
-                      onPressed: () {
-                        _incrementCounter();
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Magnetometer Access'),
-                      ),
-                    ),
-                    SizedBox(height: 4.h),
-                    ElevatedButton(
-                      style: buttonPrimaryLarge,
-                      onPressed: () {
-                        _incrementCounter();
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Gyroscope Access'),
-                      ),
-                    ),
-                    SizedBox(height: 4.h),
+                    SizedBox(height: 8.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
                         Get.toNamed('/connectivity');
                       },
-                      child: Padding(
+                      child: Padding(m
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Data Cellular Access'),
+                        child: const Text('Cellular Phone Access'),
                       ),
                     ),
                     SizedBox(height: 4.h),
