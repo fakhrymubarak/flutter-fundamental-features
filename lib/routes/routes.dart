@@ -1,7 +1,9 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:rpl_apps_flutter/routes/binding/camera_binding.dart';
 import 'package:rpl_apps_flutter/views/audio_page.dart';
+import 'package:rpl_apps_flutter/views/bluetooth_page.dart';
 import 'package:rpl_apps_flutter/views/camera_page.dart';
+import 'package:rpl_apps_flutter/views/connectivity_page.dart';
 import 'package:rpl_apps_flutter/views/contact_page.dart';
 import 'package:rpl_apps_flutter/views/biometrics_page.dart';
 import 'package:rpl_apps_flutter/views/geo_locator_page.dart';
@@ -31,5 +33,7 @@ class Routes {
     GetPage(name: '/mic', page: () => const MicPage()),
     GetPage(name: '/contact', page: () => const ContactListPage()),
     GetPage(name: '/biometrics', page: () => const BiometricsPage()),
+    GetPage(name: '/connectivity', page: () => const ConnectivityPage()),
+    GetPage(name: '/bluetooth', page: () => BluetoothPage()),
   ];
 }

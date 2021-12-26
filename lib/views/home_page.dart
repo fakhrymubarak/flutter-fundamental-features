@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:rpl_apps_flutter/themes/button_styles.dart';
 import 'package:rpl_apps_flutter/utils/notification.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     } else if (permissionStatus == PermissionStatus.permanentlyDenied) {
       final snackBar =
-      SnackBar(content: Text('Contact data not available on device'));
+          SnackBar(content: Text('Contact data not available on device'));
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
   }
@@ -159,29 +159,18 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        _incrementCounter();
+                        Get.toNamed('/connectivity');
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Cellular Access'),
+                        child: const Text('Cellular and Wifi Access'),
                       ),
                     ),
                     SizedBox(height: 16.h),
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        _incrementCounter();
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
-                        child: const Text('Wifi Access'),
-                      ),
-                    ),
-                    SizedBox(height: 16.h),
-                    ElevatedButton(
-                      style: buttonPrimaryLarge,
-                      onPressed: () {
-                        _incrementCounter();
+                        Get.toNamed('/bluetooth');
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
@@ -192,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        _incrementCounter();
+                        Get.toNamed('/bluetooth');
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
@@ -258,7 +247,7 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        _incrementCounter();
+                        Get.toNamed('/connectivity');
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
