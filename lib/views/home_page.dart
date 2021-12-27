@@ -14,9 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  void _incrementCounter() {}
-
-  void setNotificationAndroid() {
+  void _setNotificationAndroid() {
     NotificationService notificationService = NotificationService();
     notificationService.showNotifications();
   }
@@ -71,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        setNotificationAndroid();
+                        _setNotificationAndroid();
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),
@@ -82,7 +80,8 @@ class _HomePageState extends State<HomePage> {
                     ElevatedButton(
                       style: buttonPrimaryLarge,
                       onPressed: () {
-                        _incrementCounter();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('On Development')));
                       },
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(20.w, 10.h, 20.w, 10.h),

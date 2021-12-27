@@ -1,12 +1,15 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 class NotificationService {
   //Singleton pattern
   static final NotificationService _notificationService =
   NotificationService._internal();
+
   factory NotificationService() {
     return _notificationService;
   }
+
   NotificationService._internal();
 
   //instance of FlutterLocalNotificationsPlugin
@@ -14,15 +17,13 @@ class NotificationService {
   FlutterLocalNotificationsPlugin();
 
   Future<void> init() async {
-
     //Initialization Settings for Android
     const AndroidInitializationSettings initializationSettingsAndroid =
     AndroidInitializationSettings('@mipmap/ic_launcher');
 
     //InitializationSettings for initializing settings for both platforms (Android & iOS)
     const InitializationSettings initializationSettings =
-    InitializationSettings(
-        android: initializationSettingsAndroid);
+    InitializationSettings(android: initializationSettingsAndroid);
 
     await flutterLocalNotificationsPlugin.initialize(
       initializationSettings,
@@ -39,8 +40,8 @@ class NotificationService {
   Future<void> showNotifications() async {
     AndroidNotificationDetails _androidNotificationDetails =
     const AndroidNotificationDetails(
-      'channel ID',
-      'channel name',
+      '0',
+      'regular notification',
       playSound: true,
       priority: Priority.high,
       importance: Importance.high,
@@ -51,10 +52,22 @@ class NotificationService {
 
     await flutterLocalNotificationsPlugin.show(
       0,
-      'Notification Title',
+      'Regular Notification',
       'This is the Notification Body',
       platformChannelSpecifics,
       payload: 'Notification Payload',
     );
+  }
+
+}
+
+class PushNotificationService {
+  final FirebaseMessaging _fcm;
+
+  PushNotificationService(this._fcm);
+
+  Future initialise() async {
+    String? token = await _fcm.getToken();
+    print("FirebaseMessaging token: $token");
   }
 }
